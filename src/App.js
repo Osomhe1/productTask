@@ -184,39 +184,6 @@ function App() {
               path='/manage-business'
               element={<ProtectedRoutes element={<ManageBusiness />} />}
             />
-
-            <Route
-              element={
-                <ProtectedRoutes
-                  element={
-                    <HotelsProvider>
-                      <HotelsLayout />
-                    </HotelsProvider>
-                  }
-                />
-              }
-            >
-              <Route path='/hotels' element={<Hotels />} />
-              <Route path='/hotels/my-listings' element={<MyHotelListings />} />
-              <Route
-                element={
-                  <ProtectedRoutes
-                    element={
-                      <HotelsProvider>
-                        <HotelsLayout />
-                      </HotelsProvider>
-                    }
-                  />
-                }
-              >
-                <Route path='/hotels' element={<Hotels />} />
-                <Route
-                  path='/hotels/my-listings'
-                  element={<MyHotelListings />}
-                />
-                <Route path='/hotels/:id' element={<SingleHotel />} />
-              </Route>
-            </Route>
           </Route>
         </Routes>
       </div>
