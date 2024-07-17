@@ -1,5 +1,3 @@
-import { nextui } from '@nextui-org/react'
-
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   theme: {
@@ -24,5 +22,5 @@ module.exports = {
     },
   },
   darkMode: 'class',
-  plugins: [nextui()],
+  plugins: [],
 }
