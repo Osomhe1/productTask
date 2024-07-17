@@ -41,12 +41,6 @@ import Storeproduct from 'pages/Commerce/Managestore/storeproduct'
 import Myorder from 'pages/Commerce/Managestore/myorders'
 import SearchProduct from 'pages/Commerce/search'
 
-import HotelsLayout from 'Layout/HotelsLayout'
-import Hotels from 'pages/Hotels/Hotels'
-import MyHotelListings from 'pages/Hotels/MyHotelListings'
-import SingleHotel from 'pages/Hotels/SingleHotel'
-import HotelsProvider from 'Context/HotelsContext'
-
 function ScrollToTop() {
   const { pathname } = useLocation()
 
