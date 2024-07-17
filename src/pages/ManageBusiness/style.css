@@ -1,0 +1,105 @@
+.manage_business {
+  flex: 5;
+  background: #fff;
+  overflow-y: auto;
+  position: relative;
+}
+
+.manage_business::-webkit-scrollbar {
+  width: 0vw;
+  height: 0vh;
+}
+
+.empty_business {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.empty_business p {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8rem;
+}
+
+.empty_business button {
+  width: 335px;
+  height: 53px;
+  border-radius: 10px;
+  background-color: #ff8a15;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #662b00;
+
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.empty_business button:hover {
+  background-color: #d27212;
+}
+
+.bottom_box {
+  height: 90%;
+  overflow-y: auto;
+}
+
+.bottom_box::-webkit-scrollbar {
+  width: 0vw;
+  height: 0vh;
+}
+
+.business_lists {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.business_list {
+  background: #d9d9d933;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.business_list_right {
+  align-self: flex-start;
+}
+
+.business_list_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.business_list_left > div h1 {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #000000cc;
+}
+
+.business_list_left > div p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #00000099;
+}
+
+@media screen and (max-width: 1150px) {
+  .empty_business {
+    gap: 30px;
+  }
+
+  .empty_business button {
+    margin-top: 12rem;
+  }
+}

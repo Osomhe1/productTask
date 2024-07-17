@@ -1,0 +1,25 @@
+.ire{
+  width: 80%;
+}
+
+.welc-form-containr {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 940px) {
+  .welc-form-containr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* margin-top: 30%;    */
+    width: 100%;
+    margin: 0 auto;
+    
+  }
+ 
+  .ire{
+    display: none;
+  }
+}

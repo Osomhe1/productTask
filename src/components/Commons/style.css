@@ -1,0 +1,54 @@
+.image-cont-bxx {
+  background: #00000062;
+  width: 40px;
+  font-size: 16px;
+  gap: 5px;
+  position: absolute;
+  border-radius: 4px;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  color: #000;
+}
+.chtt {
+  border-radius: 30px !important;
+  width: 30%;
+  font-size: 15px;
+  height: 40px !important;
+  background: #ff8a15 !important;
+  cursor: pointer;
+}
+.sttic {
+  background: #4f0da3 !important;
+}
+.num-ph {
+  font-size: 12px;
+  font-weight: 500;
+}
+.prof-back {
+  gap: 10px;
+  cursor: pointer;
+}
+.sear-bx-sticker {
+  border-radius: 30px;
+  border: 1px solid rgba(40, 40, 40, 0.2);
+  background: #f5f5f5;
+  height: 40px;
+  margin: 5px 0;
+}
+.stic-inp {
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 100%;
+  background: none;
+}
+.stick-busi {
+  cursor: pointer;
+}
+@media only screen and (max-width: 940px) {
+  .red-mar {
+    margin-top: -20px;
+  }
+}

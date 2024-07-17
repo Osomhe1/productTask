@@ -1,0 +1,204 @@
+.post-media-container {
+  margin: 8px 0;
+}
+
+.post-media-single-grid .media-item-container,
+.post-media-double-grid .media-item-container,
+.post-media-triple-grid .media-item-container,
+.post-media-grid .media-item-container {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-media-single-grid audio::-webkit-media-controls-enclosure,
+.post-media-double-grid audio::-webkit-media-controls-enclosure,
+.post-media-triple-grid audio::-webkit-media-controls-enclosure,
+.grid-with-overlay audio::-webkit-media-controls-enclosure,
+.post-media-grid audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+}
+
+.post-media-single-grid audio,
+.post-media-double-grid audio,
+.post-media-triple-grid audio,
+.grid-with-overlay audio,
+.post-media-grid audio {
+  width: 100%;
+}
+
+.post-media-double-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+}
+
+.post-media-triple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(46.5%, 1fr));
+  row-gap: 0.7rem;
+  column-gap: 0.7rem;
+}
+
+.post-media-grid,
+.grid-with-overlay {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(31.6%, 1fr));
+  row-gap: 0.7rem;
+  column-gap: 0.7rem;
+}
+
+.post-media-grid .media-item-container:first-child,
+.grid-with-overlay .media-item-container:first-child,
+.post-media-triple-grid .media-item-container:first-child {
+  grid-column: 1/4;
+  width: 100%;
+}
+
+.post-media-grid .media-item-container:not(:first-child),
+.grid-with-overlay .media-item-container:not(:first-child),
+.post-media-triple-grid .media-item-container:not(:first-child) {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.grid-media-overlay-item {
+  height: 100px;
+  position: relative;
+}
+
+.grid-media-count {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  background: rgba(0, 0, 0, 0.548);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.post-media-triple-grid .media-item-container:not(:first-child),
+.grid-media-overlay-item .media-item-container {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.media-item-container p {
+  text-align: left;
+  width: 88%;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+.document-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  color: #000;
+  padding: 10px 4px;
+}
+
+.document-media span {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 88%;
+  text-align: center;
+}
+
+.document-media-btn {
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  padding: 4px;
+  margin-bottom: 8px;
+  gap: 11px;
+}
+
+@media screen and (max-width: 500px) {
+  .post-media-grid .media-item-container,
+  .grid-with-overlay .media-item-container {
+    max-height: 300px;
+    min-height: 100%;
+  }
+}
+
+.media-item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  /* background-color: #f9f9f9; */
+}
+
+.document-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.icon-dw {
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-size: 14px;
+  color: #333;
+}
+
+.post-media-container {
+  display: grid;
+  gap: 10px;
+}
+
+.post-media-single-grid {
+  grid-template-columns: 1fr;
+}
+
+.post-media-double-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.post-media-triple-grid {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.post-media-grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.grid-with-overlay {
+  position: relative;
+}
+
+.grid-media-overlay-item {
+  position: relative;
+}
+
+.grid-media-count {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 4px;
+}

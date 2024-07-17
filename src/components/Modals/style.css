@@ -1,0 +1,21 @@
+.new_input_form button {
+  height: 40px;
+  border-radius: 30px !important;
+  font-size: 17px;
+  font-weight: 300;
+  transition: all 0.3s ease;
+
+  margin-top: 5rem;
+}
+
+.new_input_form button:hover {
+  background: #3c0288ce;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1150px) {
+  .edit_profile_content > div {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

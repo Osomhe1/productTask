@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+
+/* 
+*--------------------------
+* This is the official layout for the project. Please do not change or modify anything here 
+*--------------------------
+*/
+.app_layout {
+  display: grid;
+  grid-template-columns: 26rem 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.app_header {
+  padding: 0 1.8rem;
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.app_aside {
+  grid-row: 1 / -1;
+  z-index: 15;
+  padding: 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.2rem;
+  background: #4f0da3;
+}
+
+.app_main {
+  padding: 0 1.5rem;
+}
+
+@media only screen and (max-width: 1150px) {
+  .app_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .app_main {
+    padding: 0;
+  }
+
+  .app_aside {
+    display: none;
+  }
+
+  .app_header {
+    display: none;
+  }
+
+  .how_to_earn_container .lists li span:first-child,
+  .how_to_earn_container .lists li span:last-child {
+    font-size: 10px;
+  }
+
+  .how_to_earn_container h2 {
+    font-size: 17px;
+  }
+
+  #reward_left_container {
+    display: none;
+  }
+}

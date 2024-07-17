@@ -1,0 +1,9 @@
+user.name=2gedaReact
+user.email=2gedareactfrontend@gmail.com
+init.defaultbranch=main
+gui.recentrepo=C:/Users/HP/Desktop/portfolio
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+core.autocrlf=false

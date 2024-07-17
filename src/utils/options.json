@@ -1,0 +1,23 @@
+[
+  {
+    "id": 17,
+    "content": "content",
+    "option_image": "https://2gedademo.s3.amazonaws.com/poll-images/avatar_d6KLR7i.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5UT6Z2QPKGXJSZQH%2F20240207%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20240207T154455Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6f859556be878e22e778ba653a407d315fae69cf84c7d26b4684123c8ed45f1f",
+    "all_vote": 10,
+    "votee": []
+  },
+  {
+    "id": 18,
+    "content": "content",
+    "option_image": "https://2gedademo.s3.amazonaws.com/poll-images/avatar_d6KLR7i.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5UT6Z2QPKGXJSZQH%2F20240207%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20240207T154455Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6f859556be878e22e778ba653a407d315fae69cf84c7d26b4684123c8ed45f1f",
+    "all_vote": 7,
+    "votee": []
+  },
+  {
+    "id": 19,
+    "content": "content",
+    "option_image": "https://2gedademo.s3.amazonaws.com/poll-images/avatar_d6KLR7i.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA5UT6Z2QPKGXJSZQH%2F20240207%2Feu-north-1%2Fs3%2Faws4_request&X-Amz-Date=20240207T154455Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6f859556be878e22e778ba653a407d315fae69cf84c7d26b4684123c8ed45f1f",
+    "all_vote": 5,
+    "votee": []
+  }
+]

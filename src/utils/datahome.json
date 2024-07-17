@@ -1,0 +1,30 @@
+[
+  {
+        "to": "/",
+        "text": "All Posts"
+  },
+  {
+        "to": "/im",
+        "text": "Images"
+  },
+  {
+        "to": "/videos",
+        "text": "Videos"
+  },
+  {
+        "to": "/voice",
+        "text": "Voice note"
+  },
+  {
+        "to": "/loc",
+        "text": "Location"
+  },
+  {
+        "to": "/music",
+        "text": "Music"
+  },
+  {
+        "to": "/files",
+        "text": "Files"
+  }
+]

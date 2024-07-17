@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "typeRoots": ["node_modules/@types", "src/types"],
+    "types": ["retry"],
+    "baseUrl": "src",
+    "paths": {
+      "components/*": ["components/*"],
+      "assets/*": ["assets/*", "pages/Stereo/Assets/*"],
+      "utils/*": ["utils/*"],
+      "layouts/*": ["layouts/*"],
+      "pages/*": ["pages/*"],
+      "api/*": ["api/*"],
+      "routes/*": ["routes/*"],
+      "context/*": ["context/*"]
+    }
+  },
+  "include": ["src"]
+}

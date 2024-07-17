@@ -1,0 +1,26 @@
+[
+  {
+        "to": "/search",
+        "text": "All"
+  },
+  {
+        "to": "/verify",
+        "text": "People"
+  },
+  {
+        "to": "/",
+        "text": "Jobs"
+  },
+  {
+        "to": "/",
+        "text": "Business"
+  },
+  {
+        "to": "/",
+        "text": "Places"
+  },
+  {
+        "to": "/",
+        "text": "Media"
+  }
+]

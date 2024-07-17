@@ -1,0 +1,329 @@
+.signup-container {
+  /* max-height: 90vh; */
+}
+.welcome-comp-box {
+  position: relative;
+}
+
+.welcome-comp-box img {
+  height: 100vh;
+  width: 90%;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* margin-bottom: -63px; */
+}
+.ad-main-con {
+  padding: 30px;
+}
+.ad-main {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  width: 60%;
+}
+.ad-text-main {
+  font-size: 35px;
+  font-weight: 600;
+}
+.ad-more-tst {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.welc-navi-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.navig-cont {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.up-wel {
+  color: #fff;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  font-weight: 600;
+  font-size: 35px;
+}
+.navigate-box {
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+.sign-form {
+  width: 60%;
+  padding-right: 50px;
+  /* margin-left: -40px; */
+  margin-right: 40px;
+}
+.create-ead-txt {
+  font-size: 20px;
+  font-weight: 600;
+  color: #4f0da3;
+  text-align: center;
+}
+.greet-txt {
+  font-size: 15px;
+  text-align: center;
+  margin: 10px 0;
+}
+.form-inp {
+  width: 100%;
+  height: 35px;
+  border-radius: 8px;
+  border: 1px solid rgba(40, 40, 40, 0.15);
+  background: rgba(196, 196, 196, 0.05);
+  outline: none;
+  padding: 0 15px;
+  font-size: 14px;
+  margin-top: 10px;
+  padding-right: 50px;
+}
+.eye-icon {
+  font-size: 20px;
+  position: absolute;
+  top: 45%;
+  right: 20px;
+  cursor: pointer;
+}
+.pass-con {
+  position: relative;
+}
+.ins-bx-txt {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.use-phone {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4f0da3;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.btn-continu {
+  margin: 40px 0 10px;
+  display: flex;
+  justify-content: center;
+}
+.alr-ave {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+.alr-ave span {
+  color: #4f0da3;
+  font-weight: 500;
+}
+.bvb {
+  visibility: hidden;
+}
+
+.PhoneInputInput {
+  /* The phone number input stretches to fill all empty space */
+  flex: 1;
+  /* The phone number input should shrink
+	   to make room for the extension input */
+  min-width: 0;
+  outline: none;
+  height: 35px;
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border: 1px solid rgba(40, 40, 40, 0.15);
+  padding: 0 10px;
+}
+.goto-link {
+  text-decoration: none;
+}
+.goto-link span {
+  text-decoration: none;
+  color: #4f0da3;
+}
+.custom-phone-input {
+  border-radius: 8px;
+  background: rgba(217, 217, 217, 0.3);
+  padding-left: 10px;
+}
+.PhoneInputCountryIcon {
+  width: 60px !important;
+  height: 35px;
+  border: none;
+  outline: none;
+}
+.PhoneInputCountrySelect:focus
+  + .PhoneInputCountryIcon
+  + .PhoneInputCountrySelectArrow {
+  opacity: 1;
+  color: #000;
+  color: #000;
+}
+.PhoneInputCountrySelect:focus + .PhoneInputCountryIcon--border {
+  box-shadow: none;
+  box-shadow: none;
+}
+
+.PhoneInputCountrySelect:focus
+  + .PhoneInputCountryIcon
+  .PhoneInputInternationalIconGlobe {
+  opacity: 1;
+  color: #03b2cb;
+  color: var(--PhoneInputCountrySelectArrow-color--focus);
+}
+.PhoneInputCountryIcon--border {
+  background-color: none;
+  background-color: none;
+  box-shadow: none;
+  box-shadow: none;
+}
+.PhoneInputCountrySelectArrow {
+  content: "";
+  width: 7px;
+  width: 7px;
+  height: 7px;
+  height: 7px;
+  margin-left: 5px;
+  margin-left: 5px;
+  opacity: 0.75;
+  opacity: 0.75;
+}
+
+.PhoneInputCountryIcon--square {
+  width: 70px;
+  width: var(--PhoneInputCountryFlag-height);
+}
+
+.forg-pas-contan {
+  font-size: 12px;
+  color: #f96969;
+  margin-top: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1300px) {
+  .up-wel {
+    left: 13%;
+  }
+}
+@media only screen and (max-width: 940px) {
+  .welcome-comp-box img {
+    height: 70vh;
+    width: 100%;
+    border-radius: 0;
+  }
+  .ad-main {
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    width: 70%;
+  }
+  .welc-navi-box {
+    display: none;
+  }
+  .sign-form {
+    width: 100%;
+    padding: 60px;
+    margin-right: 0px;
+  }
+  .up-wel {
+    left: 30%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .up-wel {
+    left: 24%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .ad-text-main {
+    font-size: 25px;
+  }
+  .ad-more-tst {
+    font-size: 16px;
+  }
+  .welcome-comp-box img {
+    height: 50vh;
+  }
+  .greet-txt {
+    font-size: 13px;
+  }
+  .sign-form {
+    width: 100%;
+    padding: 20px;
+    margin-right: 0px;
+  }
+  .up-wel {
+    left: 18%;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .up-wel {
+    left: 17%;
+    right: 12%;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .up-wel {
+    left: 12%;
+    right: 12%;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .ad-text-main {
+    font-size: 23px;
+  }
+  .ad-more-tst {
+    font-size: 14px;
+  }
+  .welcome-comp-box img {
+    height: 40vh;
+  }
+  .ins-bx-txt {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .up-wel {
+    top: 13%;
+  }
+  .ad-main {
+    top: 35%;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .up-wel {
+    top: 13%;
+    font-size: 23px;
+    left: 15%;
+  }
+  .ad-text-main {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+}
+@media only screen and (max-width: 284px) {
+  .up-wel {
+    top: 12%;
+    font-size: 22px;
+    left: 13%;
+  }
+  .ad-text-main {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  .ad-main {
+    left: 5%;
+    width: 90%;
+  }
+}

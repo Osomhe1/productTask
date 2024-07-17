@@ -1,0 +1,113 @@
+.my-busi-pos {
+  font-size: 18px;
+  font-weight: 500;
+}
+.poster-nm {
+  font-size: 13px;
+  color: rgba(16, 14, 14, 0.8);
+}
+.posted-time {
+  font-size: 12px;
+  color: rgba(16, 14, 14, 0.6);
+}
+.poster-time-box {
+  justify-content: space-between;
+}
+.price-posted {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(16, 14, 14, 0.6);
+}
+.business-card-container {
+  border-radius: 10px;
+  border: 3px solid rgba(195, 195, 195, 0.4);
+  background: #fff;
+  padding: 10px;
+  width: 200px;
+  margin: 10px 0;
+}
+.cont-poste-sh {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bus-container-row {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: normal;
+}
+.bus-container-row::-webkit-scrollbar {
+  height: 0.1vh;
+  background: #fff;
+}
+.business-card-container img {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.post-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.rate-star-bx {
+  color: #ff8a15;
+  font-size: 15px;
+  gap: 5px;
+}
+.busi-cont {
+  margin: 20px 0;
+}
+.buss-cmall {
+  align-items: center;
+}
+.buss-cmall img {
+  border-radius: 50%;
+}
+.rat-v {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+}
+.top-bu-bx {
+  align-items: center;
+}
+.buss-tp {
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .side-top-bss {
+    display: none;
+  }
+  .buss-prof-boxx {
+    width: 120%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .buss-prof-boxx {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .buss-prof-boxx {
+    margin-left: 80px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .buss-prof-boxx {
+    margin-left: 55px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .all-stic-bx {
+    width: 90% !important;
+  }
+  .buss-prof-boxx {
+    margin-left: 25px;
+    width: 110%;
+  }
+}
