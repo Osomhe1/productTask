@@ -73,7 +73,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "npx --max-old-space-size=9096 react-scripts build ",
+    "build": "npx react-scripts build ",
     "test": "react-scripts test",
     "optimize-svgs": "powershell -Command \"Get-ChildItem -Path .\\src\\ -Recurse -Filter *.svg | ForEach-Object { npx svgo --multipass $_.FullName }\"",
     "eject": "react-scripts eject"
