@@ -10,7 +10,7 @@ import {
 } from 'react-icons/md'
 import { ModalContext } from 'Context/ModalContext'
 import toast from 'react-hot-toast'
-import connectwhitelogo from '../assets/connectwhitelogo.svg'
+import connectwhitelogo from '../assets/connectwhitelogo-removebg.svg'
 import { LiaConnectdevelop } from 'react-icons/lia'
 import { IoMdBook } from 'react-icons/io'
 import { TiBusinessCard } from 'react-icons/ti'
@@ -61,37 +61,17 @@ export const SliderContent = ({ setSlider }) => {
           }
         >
           <MdOutlineStorefront className='text-[23px]' />
-          <div>Commerce</div>
-        </NavLink>
-
-        <NavLink
-          to='/business'
-          className={({ isActive }) =>
-            isActive ? nav_item_style['active'] : nav_item_style['non_active']
-          }
-        >
-          <TiBusinessCard className='text-[23px]' />
-          <div>Business Directory</div>
-        </NavLink>
-
-        <NavLink
-          to='/hotels'
-          className={({ isActive }) =>
-            isActive ? nav_item_style['active'] : nav_item_style['non_active']
-          }
-        >
-          <FaHotel className='text-[23px]' />
-          <div>Hotels</div>
+          <div>Fisolak Online Store</div>
         </NavLink>
       </div>
 
-      <button
+      {/* <button
         className='flex items-center space-x-2 text-[15px] text-white'
         onClick={handleLogout}
       >
         <IoLogOutOutline className='text-[23px]' />
         <span>Sign out</span>
-      </button>
+      </button> */}
     </>
   )
 }

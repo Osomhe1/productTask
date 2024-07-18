@@ -1,7 +1,7 @@
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { FaRegBell } from 'react-icons/fa'
 // import logo_2geda from './../assets/profile_images/2geda_logo.png'
-import logo_2geda from './../assets/2geda-logo.svg'
+import logo_2geda from './../assets/connectwhitelogo.jpg'
 import { useProfile } from 'Hooks/profile/useProfile'
 import { useFetchSearch, useFetchUnreadNotification } from 'api/services/feeds'
 import { useState } from 'react'
@@ -52,7 +52,7 @@ export const Header = () => {
 
   return (
     <header className='app_header hiddn lg:flex'>
-      <div className='flex justify-between lg:gap-[200px] 2xl:gap-[350px] py-3 items-center w-full'>
+      <div className='flex justify-between lg:gap-[200px] 2xl:gap-[350px] py-3 items-center h2 w-40'>
         <img
           src={logo_2geda}
           alt='2geda Logo'

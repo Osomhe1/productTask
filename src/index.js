@@ -7,19 +7,15 @@ import reportWebVitals from './reportWebVitals'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ReactQueryProvider } from 'providers/QueryProvider'
 import { ModalContextProvider } from 'Context/ModalContext'
-import { Provider } from 'react-redux'
-import store from '../src/redux/store'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <ReactQueryProvider>
     <React.StrictMode>
       <ModalContextProvider>
-        <Provider store={store}>
-          <Router>
-            <App />
-          </Router>
-        </Provider>
+        <Router>
+          <App />
+        </Router>
       </ModalContextProvider>
     </React.StrictMode>
   </ReactQueryProvider>

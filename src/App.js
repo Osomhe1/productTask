@@ -3,24 +3,12 @@ import { useContext, useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 
 import { ProtectedRoutes } from './routes/ProtectedRoutes'
-import Landing from './pages/LandingPage'
-/**
- * ---------------------------
- * AUTH
- * ---------------------------
- */
-import Signup from './pages/Signup'
-import Signin from './pages/Signin'
-import Verify from './pages/Verify'
-import ForgotPassword from './pages/ForgotPassword'
-
-import BusinessDirectory from './pages/BussinessDirectory/BusinessDirectory'
+import MainLayout from 'Layout/MainLayout'
 import ProductCategory from 'pages/Commerce/category/index'
 import Productinformation from 'pages/Commerce/products/productInfo'
 import Cart from 'pages/Commerce/cart'
 
 import { Toaster } from 'react-hot-toast'
-import PrivacyPolicy from './components/LandinComp/Privacy'
 
 /**
  * ---------------------------
@@ -28,8 +16,6 @@ import PrivacyPolicy from './components/LandinComp/Privacy'
  * ---------------------------
  */
 import { ModalContext } from 'Context/ModalContext'
-import ManageBusiness from 'pages/ManageBusiness/ManageBusiness'
-import BusinessProfile from './pages/BusinessProfile/BusinessProfile'
 
 import { AppLayout } from 'Layout/AppLayout'
 
@@ -86,29 +72,16 @@ function App() {
         />
 
         <Routes>
-          {/* AUTH */}
-          <Route index path='/Signup' element={<Signup />} />
-          <Route index path='/Signin' element={<Signin />} />
-          <Route index path='/reset-password' element={<ForgotPassword />} />
-          <Route index path='/verify' element={<Verify />} />
-
-          <Route
-            path='/'
-            element={
-              isAuthenticated ? <Navigate replace to='commerce' /> : <Landing />
-            }
-          />
-
           {/* Below are the pages with aside containers */}
 
           <Route element={<AppLayout />}>
-            <Route element={<Navigate replace to='commerce' />} />
+            <Route element={<Navigate replace to='/' />} />
 
             {/* Commerce-routes */}
             <Route
               // removed-protected-route-for-testing-purpose
-              path='/commerce'
-              element={<ProtectedRoutes element={<Commerce />} />}
+              path='/'
+              element={<Commerce />}
             />
 
             {/* route-to-specific-category in commerce page */}
@@ -155,28 +128,6 @@ function App() {
             <Route
               path='/commerce/managestore/myorders'
               element={<ProtectedRoutes element={<Myorder />} />}
-            />
-
-            <Route
-              path='/PrivacyPolicy'
-              element={<ProtectedRoutes element={<PrivacyPolicy />} />}
-            />
-
-            <Route path='/PrivacyPolicy' element={<PrivacyPolicy />} />
-
-            <Route
-              path='/business'
-              element={<ProtectedRoutes element={<BusinessDirectory />} />}
-            />
-
-            <Route
-              path='/business-profile'
-              element={<ProtectedRoutes element={<BusinessProfile />} />}
-            />
-
-            <Route
-              path='/manage-business'
-              element={<ProtectedRoutes element={<ManageBusiness />} />}
             />
           </Route>
         </Routes>
