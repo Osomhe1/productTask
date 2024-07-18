@@ -2,7 +2,12 @@ import { Box, Button, Stack } from '@mui/material'
 import Header from '../typography/txtHeader'
 import InputField from '../shared/inputField'
 import Description from '../typography/txtDescription'
-import { trendSales } from 'components/newCommerce/data/commerceMock'
+import {
+  Furniture,
+  Kids,
+  trendSales,
+} from 'components/newCommerce/data/commerceMock'
+import { Store } from '../data/storeData'
 import Stacked from '../shared/Stacked'
 import { useContext } from 'react'
 import Template from '../shared/template'
@@ -48,7 +53,8 @@ const Body = () => {
   // const [cartItems, setCartItems] = useState([]);
   const { topProduct } = useContext(ModalContext)
 
-  const funiture = `https://plus.unsplash.com/premium_photo-1670076513880-f58e3c377903?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZnVuaXR1cmV8ZW58MHx8MHx8fDA%3D`
+  console.log(datas, 'lllo')
+  // const funiture =
 
   useEffect(() => {
     async function fetchList() {
@@ -125,6 +131,8 @@ const Body = () => {
       </Box>
     )
   }
+
+  console.log(datas, 'ggg')
 
   if (error) {
     return (
@@ -317,10 +325,8 @@ const Body = () => {
                   <h3 className='text-center'>No Content here!</h3>
                 ) : (
                   <Box pt={1} className='grid_commerce'>
-                    <Template content={Automobiledatas} />
-                    <Template content={Automobiledatas} />
-                    <Template content={Automobiledatas} />
-                    <Template content={Automobiledatas} />
+                    {/* <Template content={Automobiledatas} /> */}
+                    <Template content={Store} />
                   </Box>
                 )}
               </Box>
@@ -347,7 +353,8 @@ const Body = () => {
               </Stack>
             </Box> */}
             {/* kids-and toys */}
-            {KidsToys.length >= 1 && (
+            {/* {KidsToys.length >= 1 && ( */}
+            {Kids?.length >= 1 && (
               <Box
                 bgcolor='#ffff'
                 pt={2}
@@ -369,12 +376,14 @@ const Body = () => {
                     View more&gt;&gt;
                   </Link>
                 </Stacked>
-                <Box pt={1} className='grid_commerce'>
-                  {KidsToys.length < 1 ? (
+                <Box pt={1} className=''>
+                  {/* {KidsToys.length < 1 ? ( */}
+                  {Kids?.length < 1 ? (
                     <h3 className='text-center'>No Content here!</h3>
                   ) : (
                     <Box pt={1} className='grid_commerce'>
-                      <Template content={KidsToys} />
+                      {/* <Template content={KidsToys} /> */}
+                      <Template content={Kids} />
                     </Box>
                   )}
                 </Box>
@@ -382,7 +391,8 @@ const Body = () => {
             )}
             {/* Furniture-and-Decorations */}
 
-            {Furnitures.length >= 1 && (
+            {/* {Furnitures.length >= 1 && ( */}
+            {Furniture.length >= 1 && (
               <Box
                 bgcolor='#ffff'
                 pt={2}
@@ -404,11 +414,13 @@ const Body = () => {
                     View more&gt;&gt;
                   </Link>
                 </Stacked>
-                {Furnitures.length < 1 ? (
+                {/* {Furnitures.length < 1 ? ( */}
+                {Furniture?.length < 1 ? (
                   <h3 className='text-center'>No Content here!</h3>
                 ) : (
                   <Box pt={1} className='grid_commerce'>
-                    <Template content={Furnitures} />
+                    {/* <Template content={Furnitures} /> */}
+                    <Template content={Furniture} />
                   </Box>
                 )}
               </Box>
