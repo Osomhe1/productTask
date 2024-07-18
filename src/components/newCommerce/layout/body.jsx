@@ -48,12 +48,11 @@ const Body = () => {
   const [searchpop, Setsearchpop] = useState(false)
   const [loading, setLoading] = useState(true)
   const [datas, setDatas] = useState([])
-  const [error, setError] = useState(null)
+  const [error, setError] = useState(false)
   const searchpopRef = useRef(null)
   // const [cartItems, setCartItems] = useState([]);
   const { topProduct } = useContext(ModalContext)
 
-  console.log(datas, 'lllo')
   // const funiture =
 
   useEffect(() => {
@@ -131,8 +130,6 @@ const Body = () => {
       </Box>
     )
   }
-
-  console.log(datas, 'ggg')
 
   if (error) {
     return (

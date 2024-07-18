@@ -46,7 +46,7 @@ export const SliderContent = ({ setSlider }) => {
     <>
       <div className='flex flex-col space-y-10'>
         <NavLink
-          to='/commerce'
+          to='/'
           className={({ isActive }) =>
             isActive ? nav_item_style['active'] : nav_item_style['non_active']
           }
@@ -55,7 +55,7 @@ export const SliderContent = ({ setSlider }) => {
         </NavLink>
 
         <NavLink
-          to='/commerce'
+          to='/'
           className={({ isActive }) =>
             isActive ? nav_item_style['active'] : nav_item_style['non_active']
           }
