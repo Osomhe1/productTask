@@ -48,7 +48,7 @@ const Body = () => {
   const [searchpop, Setsearchpop] = useState(false)
   const [loading, setLoading] = useState(true)
   const [datas, setDatas] = useState([])
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(null)
   const searchpopRef = useRef(null)
   // const [cartItems, setCartItems] = useState([]);
   const { topProduct } = useContext(ModalContext)
