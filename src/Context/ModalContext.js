@@ -1,42 +1,37 @@
-import {
-  ActivePollsApi,
-  EndedPollsApi,
-  MyPollsApi,
-} from "api/services/auth&poll";
-import { createContext, useState } from "react";
-import toast from "react-hot-toast";
+import { createContext, useState } from 'react'
+import toast from 'react-hot-toast'
 
-export const ModalContext = createContext();
- 
+export const ModalContext = createContext()
+
 export const ModalContextProvider = ({ children }) => {
   // --------------------COMMERCE-START----------------------
   // for-modalpopup-review-sections
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false)
   //currently active if checking reviews or create/add A review
-  const [currentCheck, setCurrentcheck] = useState("readReview");
-  const [contentType, setcontentType] = useState("");
+  const [currentCheck, setCurrentcheck] = useState('readReview')
+  const [contentType, setcontentType] = useState('')
 
   // cart-page-current-modal-popup
-  const [cartContent, setCartcontent] = useState("");
+  const [cartContent, setCartcontent] = useState('')
 
   // mobile-switchproductsand-store-toggle
-  const [topProduct, Setstore] = useState("topProducts");
+  const [topProduct, Setstore] = useState('topProducts')
 
   const switchStore = (payload) => {
-    Setstore(payload);
-  };
-  const [storeContext, setStorecontext] = useState([]);
+    Setstore(payload)
+  }
+  const [storeContext, setStorecontext] = useState([])
 
   // state-to-setandchange-thecart-object that is clicked -through-id and fetch the items data and buyers data
 
-  const [cartParam, setCartparams] = useState(0);
-  const [isCreated, setisCreated] = useState(false);
+  const [cartParam, setCartparams] = useState(0)
+  const [isCreated, setisCreated] = useState(false)
   // isStoreedit?
   const [storeEdit, isStoredit] = useState({
     edit: false,
     id: null,
     prevdata: null,
-  });
+  })
 
   // isProductedit?
 
@@ -44,129 +39,81 @@ export const ModalContextProvider = ({ children }) => {
     edit: false,
     id: null,
     prevdata: null,
-  });
+  })
   // fuction-tochange-the state-changes-and-renderings
   //of which cart tem is clicked
   //of which cart tem is clicked
   const fetchCartid = (paramsid) => {
-    setCartparams(paramsid);
-  };
+    setCartparams(paramsid)
+  }
 
   // state-to-setandchange-theitem-object that is clicked -through-id and fetch the items data and buyers data
 
-  const [itemParam, setItemparam] = useState([]);
+  const [itemParam, setItemparam] = useState([])
 
   // fuction-tochange-the state-changes-and-renderings
   //of which  tem is clicked to buy
   const fetchItemid = (itemid) => {
-    setItemparam([itemid]);
-  };
+    setItemparam([itemid])
+  }
 
   // function-to-setcartcontent-basedoncurrent buy action
   const nextCartPopup = (payload) => {
-    setCartcontent(payload);
-  };
+    setCartcontent(payload)
+  }
 
   //fuction-to-set-isopen-to-false(open modal)
   const openModal = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   // //function-to-close-modal(close modal)-false
   const closeModal = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   //if after checking decides to add then render-the layout-for-add -review
   const movetoAdd = () => {
-    setCurrentcheck("addReview");
-  };
+    setCurrentcheck('addReview')
+  }
 
   // /arrow-back-to-review
   const movetoReview = () => {
-    setCurrentcheck("readReview");
-  };
+    setCurrentcheck('readReview')
+  }
 
   //setmodalcontent
   const setModalContent = (content) => {
-    setcontentType(content);
-  };
+    setcontentType(content)
+  }
 
   const setcontentstore = (payload) => {
-    setStorecontext(payload);
-  };
+    setStorecontext(payload)
+  }
 
   // -----------------COMMERCE END---------------
 
   // ----------------- AUTH & POLL & CONNECT START---------------
   const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("isAuthenticated") === "true"
-  );
-  const [modal, setModal] = useState({});
-  const [loading, setLoading] = useState(true);
+    localStorage.getItem('isAuthenticated') === 'true'
+  )
+  const [modal, setModal] = useState({})
+  const [loading, setLoading] = useState(true)
 
-  const [singlePoll, setSinglePoll] = useState(null);
-  const [polls, setPolls] = useState([]);
-  const [activePolls, setActivePolls] = useState([]);
-  const [endedPolls, setEndedPolls] = useState([]);
-  const [showAction, setShowAction] = useState(false);
-  const [isPageLoading, setIsPageLoading] = useState(true);
+  const [singlePoll, setSinglePoll] = useState(null)
+  const [polls, setPolls] = useState([])
+  const [activePolls, setActivePolls] = useState([])
+  const [endedPolls, setEndedPolls] = useState([])
+  const [showAction, setShowAction] = useState(false)
+  const [isPageLoading, setIsPageLoading] = useState(true)
 
-  const [userDistance, setUserDistance] = useState(null);
-
-  const handleMyPolls = async (e) => {
-    try {
-      // setLoading(true);
-      const resp = await MyPollsApi();
-
-      if (resp.data.status) {
-        setPolls(resp?.data?.data);
-      }
-    } catch (error) {
-      console.log("mypolls", error);
-      toast.error(error.response.data.message || "Something went wrong!");
-    } finally {
-      setIsPageLoading(false);
-    }
-  };
-
-  const handleActivePolls = async (e) => {
-    try {
-      // setLoading(true);
-      const resp = await ActivePollsApi();
-
-      if (resp.data.status) {
-        setActivePolls(resp?.data?.data);
-      }
-    } catch (error) {
-      console.log("activepolls", error);
-      toast.error(error.response.data.message || "Something went wrong!");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleEndedPolls = async (e) => {
-    try {
-      setLoading(true);
-      const resp = await EndedPollsApi();
-
-      if (resp.data.status) {
-        setEndedPolls(resp?.data?.data);
-      }
-    } catch (error) {
-      console.log("endedpolls", error);
-      toast.error(error.response.data.message || "Something went wrong!");
-    } finally {
-      setIsPageLoading(false);
-    }
-  };
+  const [userDistance, setUserDistance] = useState(null)
 
   const isCloseTimeReached = (closeTime) => {
-    const closeDate = new Date(closeTime);
-    const currentDate = new Date();
-    return currentDate.getTime() >= closeDate.getTime();
-  };
+    const closeDate = new Date(closeTime)
+    const currentDate = new Date()
+    return currentDate.getTime() >= closeDate.getTime()
+  }
 
   // -----------------AUTH & POLL & CONNECT END---------------
 
@@ -183,9 +130,6 @@ export const ModalContextProvider = ({ children }) => {
         setActivePolls,
         endedPolls,
         setEndedPolls,
-        handleMyPolls,
-        handleActivePolls,
-        handleEndedPolls,
         showAction,
         setShowAction,
         loading,
@@ -221,5 +165,5 @@ export const ModalContextProvider = ({ children }) => {
     >
       {children}
     </ModalContext.Provider>
-  );
-};
+  )
+}

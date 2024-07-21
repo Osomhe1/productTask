@@ -51,8 +51,8 @@ export const Header = () => {
   // }
 
   return (
-    <header className='app_header hiddn lg:flex'>
-      <div className='flex justify-between lg:gap-[200px] 2xl:gap-[350px] py-3 items-center h2 w-40'>
+    <header className='app_header hiddn  lg:flex'>
+      <div className='flex justify-between  lg:gap[200px] 2xl:gap[350px] py-3 items-center   w-40'>
         <img
           src={logo_2geda}
           alt='2geda Logo'
@@ -62,7 +62,7 @@ export const Header = () => {
           className='cursor-pointer lg:ml-[280px]'
         />
 
-        <div className='flex justify-between gap-10  items-center'>
+        {/* <div className='flex justify-between gap-10  items-center'>
           <form className='flex relative p-2 space-x-2 rounded-[8px] border border-gray-400 focus-within:bg-slate-200 transition-colors duration-300'>
             <input
               type='text'
@@ -108,7 +108,7 @@ export const Header = () => {
             />
             <div className='text-[10px] w-40  font-extralight'>My Profile</div>
           </button>
-        </div>
+        </div> */}
       </div>
     </header>
   )

@@ -25,20 +25,20 @@ const MobileNav = () => {
           </li>
         ))}
       </ul>
-      {/* <div className="flex flex-col items-center">
+      <div className='flex flex-col items-center'>
         <Link
-          to="/Signin"
-          className="px-6 py-3 text-center bg-[#4F0DA3]  text-[#fff] md:text-[14px] text-[13px] no-underline rounded-xl flex items-center justify-center w-[150px]"
+          to='/Signin'
+          className='px-6 py-3 text-center bg-[#4F0DA3]  text-[#fff] md:text-[14px] text-[13px] no-underline rounded-xl flex items-center justify-center w-[150px]'
         >
           Login
         </Link>
         <Link
-          to="/Signup"
-          className="px-6 py-3 text-center bg-[#4F0DA3] mt-4  text-[#fff] md:text-[14px] text-[13px] no-underline rounded-xl flex items-center justify-center w-[150px]"
+          to='/Signup'
+          className='px-6 py-3 text-center bg-[#4F0DA3] mt-4  text-[#fff] md:text-[14px] text-[13px] no-underline rounded-xl flex items-center justify-center w-[150px]'
         >
           Get started
         </Link>
-      </div> */}
+      </div>
     </div>
   )
 }

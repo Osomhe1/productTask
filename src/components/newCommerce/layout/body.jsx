@@ -122,7 +122,7 @@ const Body = () => {
         sx={{}}
         flex={8}
         pb={2}
-        className='main_container'
+        className='main_container '
       >
         <div className='absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'>
           <Loader />
@@ -202,7 +202,7 @@ const Body = () => {
               },
             }}
           >
-            <Header title='Buy and sell instantly' />
+            <Header  title='Buy and sell instantly' />
             <div
               className='relative search_popup_commerce cursor-pointer'
               onClick={() => {
