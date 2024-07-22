@@ -52,24 +52,21 @@ const SigninForm = () => {
       const response = await Login(formData)
 
       setIsAuthenticated(true)
-
-      localStorage.setItem('authToken', response.data.data.token)
+      console.log(response.data.data.token, 'token')
+      localStorage.setItem('token', response.data.data.token)
       localStorage.setItem('accounts', response.data.data.accounts)
 
       const userInfo = await UserInfoApi(response.data.data.token)
 
       userInfo.data &&
-        localStorage.setItem(
-          '2gedaUserInfo',
-          JSON.stringify(userInfo?.data.data)
-        )
-
-      if (userInfo?.data?.data.user.is_verified) {
-        toast.success(userInfo?.data?.message || 'Log In Successful')
-        navigate('/Home')
-      } else {
-        setIsEmailVerify(true)
-      }
+        localStorage.setItem('fisolak', JSON.stringify(userInfo?.data.data))
+      navigate('/')
+      // if (userInfo?.data?.data.user.is_verified) {
+      //   toast.success(userInfo?.data?.message || 'Log In Successful')
+      //   navigate('/')
+      // } else {
+      //   setIsEmailVerify(true)
+      // }
     } catch (error) {
       console.log(error)
       toast.error(
@@ -156,11 +153,11 @@ const SigninForm = () => {
         </form>
       </div>
 
-      {IsEmailVerify && (
+      {/* {IsEmailVerify && (
         <Modal>
           <EmailVerify setIsEmailVerify={setIsEmailVerify} />
         </Modal>
-      )}
+      )} */}
     </>
   )
 }

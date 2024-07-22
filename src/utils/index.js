@@ -1,1 +1,1 @@
-export const url = "https://api.2geda.net/api";
+export const url = 'https://fisolak-backend.onrender.com/api'

@@ -202,7 +202,7 @@ const Body = () => {
               },
             }}
           >
-            <Header  title='Buy and sell instantly' />
+            <Header title='Buy and sell instantly' />
             <div
               className='relative search_popup_commerce cursor-pointer'
               onClick={() => {
@@ -322,8 +322,7 @@ const Body = () => {
                   <h3 className='text-center'>No Content here!</h3>
                 ) : (
                   <Box pt={1} className='grid_commerce'>
-                    {/* <Template content={Automobiledatas} /> */}
-                    <Template content={Store} />
+                    <Template content={Automobiledatas} />
                   </Box>
                 )}
               </Box>
@@ -350,8 +349,7 @@ const Body = () => {
               </Stack>
             </Box> */}
             {/* kids-and toys */}
-            {/* {KidsToys.length >= 1 && ( */}
-            {Kids?.length >= 1 && (
+            {KidsToys?.length >= 1 && (
               <Box
                 bgcolor='#ffff'
                 pt={2}
@@ -374,13 +372,11 @@ const Body = () => {
                   </Link>
                 </Stacked>
                 <Box pt={1} className=''>
-                  {/* {KidsToys.length < 1 ? ( */}
-                  {Kids?.length < 1 ? (
+                  {KidsToys?.length < 1 ? (
                     <h3 className='text-center'>No Content here!</h3>
                   ) : (
                     <Box pt={1} className='grid_commerce'>
-                      {/* <Template content={KidsToys} /> */}
-                      <Template content={Kids} />
+                      <Template content={KidsToys} />
                     </Box>
                   )}
                 </Box>
@@ -388,8 +384,7 @@ const Body = () => {
             )}
             {/* Furniture-and-Decorations */}
 
-            {/* {Furnitures.length >= 1 && ( */}
-            {Furniture.length >= 1 && (
+            {Furnitures.length >= 1 && (
               <Box
                 bgcolor='#ffff'
                 pt={2}
@@ -411,13 +406,11 @@ const Body = () => {
                     View more&gt;&gt;
                   </Link>
                 </Stacked>
-                {/* {Furnitures.length < 1 ? ( */}
-                {Furniture?.length < 1 ? (
+                {Furnitures.length < 1 ? (
                   <h3 className='text-center'>No Content here!</h3>
                 ) : (
                   <Box pt={1} className='grid_commerce'>
-                    {/* <Template content={Furnitures} /> */}
-                    <Template content={Furniture} />
+                    <Template content={Furnitures} />
                   </Box>
                 )}
               </Box>

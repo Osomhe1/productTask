@@ -62,7 +62,8 @@ const SignForm = () => {
 
         localStorage?.setItem('authTOken', token)
 
-        navigate('/verify')
+        // navigate('/verify')
+        navigate('/Signin')
       }
     } catch (error) {
       console.log(error)

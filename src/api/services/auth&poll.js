@@ -7,7 +7,7 @@ export const getToken = () => {
 }
 
 export const getLoginToken = () => {
-  const token = localStorage.getItem('authToken')
+  const token = localStorage.getItem('token')
   return token
 }
 
@@ -69,5 +69,3 @@ export const ForgotPassword = async (data) => {
   const res = await axios.post(`${url}/auth/forgot-password/`, { ...data })
   return res
 }
-
-

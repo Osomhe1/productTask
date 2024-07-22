@@ -29,6 +29,7 @@ import SearchProduct from 'pages/Commerce/search'
 import Signup from 'pages/Signup'
 import Signin from 'pages/Signin'
 import ForgotPassword from 'pages/ForgotPassword'
+import Verify from 'pages/Verify'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -77,6 +78,7 @@ function App() {
         <Routes>
           <Route path='/Signin' element={<Signin />} />
           <Route path='/Signup' element={<Signup />} />
+          <Route path='/verify' element={<Verify />} />
           <Route path='/reset-password' element={<ForgotPassword />} />
           {/* Below are the pages with aside containers */}
 

@@ -21,6 +21,7 @@ export const AppLayout = () => {
     localStorage.setItem('isAuthenticated', isAuthenticated)
   }, [isAuthenticated])
 
+  console.log(isAuthenticated, 'isAuthenticated')
   return (
     <div
       className={`${
