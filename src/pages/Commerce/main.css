@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Ubuntu", "Poppins";
+  font-family: 'Ubuntu', 'Poppins';
 }
 :root {
   --baseCol: #4f0da3;
@@ -20,7 +20,7 @@ a {
   /* font-family: "Ubuntu"; */
 }
 .css-10hburv-MuiTypography-root {
-  font-family: "Ubuntu" !important;
+  font-family: 'Ubuntu' !important;
   /* color: rgb(83, 39, 141); */
 }
 
@@ -55,6 +55,16 @@ a {
   width: 100%;
 }
 /* grid-product-details-layout */
+
+@media only screen and (max-width: 678px) {
+  .grid_commerce {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.3rem;
+    padding: 0.5rem;
+    justify-content: start;
+  }
+}
 
 .grid_details_container {
   display: grid;
@@ -131,7 +141,7 @@ a {
 }
 
 label {
-  font-family: "Ubuntu" !important;
+  font-family: 'Ubuntu' !important;
 }
 
 .flex_setaddress {
@@ -622,7 +632,7 @@ overlay_modal::-webkit-scrollbar {
   margin-left: 0;
 }
 
-.toggle_container_sell > label > input[type="checkbox"]:checked + div > span {
+.toggle_container_sell > label > input[type='checkbox']:checked + div > span {
   color: white !important;
   left: 1.2rem !important;
 }

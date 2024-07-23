@@ -53,7 +53,9 @@ const SigninForm = () => {
 
       setIsAuthenticated(true)
       console.log(response.data.data.token, 'token')
+      console.log(response.data.data, 'data')
       localStorage.setItem('token', response.data.data.token)
+      localStorage.setItem('isAdmin', response.data.data.is_admin)
       localStorage.setItem('accounts', response.data.data.accounts)
 
       const userInfo = await UserInfoApi(response.data.data.token)

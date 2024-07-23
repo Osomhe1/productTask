@@ -93,49 +93,34 @@ function App() {
             />
 
             {/* route-to-specific-category in commerce page */}
-            <Route
-              path='/commerce/:category'
-              element={<ProtectedRoutes element={<ProductCategory />} />}
-            />
+            <Route path='/commerce/:category' element={<ProductCategory />} />
             <Route
               // removed-protected-route-for-testing-purpose
               path='/commerce/product/:productName'
-              element={<ProtectedRoutes element={<Productinformation />} />}
+              element={<Productinformation />}
             />
 
-            <Route
-              path='/commerce/cart'
-              element={<ProtectedRoutes element={<Cart />} />}
-            />
+            <Route path='/commerce/cart' element={<Cart />} />
 
             {/* Search_commerce-page */}
-            <Route
-              path='/commerce/search/:query'
-              element={<ProtectedRoutes element={<SearchProduct />} />}
-            />
+            <Route path='/commerce/search/:query' element={<SearchProduct />} />
             {/* OrderHistorycommerce-page */}
-            <Route
-              path='/commerce/orderhistory'
-              element={<ProtectedRoutes element={<OrderHistroy />} />}
-            />
+            <Route path='/commerce/orderhistory' element={<OrderHistroy />} />
 
             {/* manage_store-commerce-page */}
 
-            <Route
-              path='/commerce/managestore'
-              element={<ProtectedRoutes element={<ManageStore />} />}
-            />
+            <Route path='/commerce/managestore' element={<ManageStore />} />
             {/* manage_store-commerce-page */}
 
             <Route
               path='/commerce/managestore/:product'
-              element={<ProtectedRoutes element={<Storeproduct />} />}
+              element={<Storeproduct />}
             />
             {/* manage-store-my-orders */}
 
             <Route
               path='/commerce/managestore/myorders'
-              element={<ProtectedRoutes element={<Myorder />} />}
+              element={<Myorder />}
             />
           </Route>
         </Routes>

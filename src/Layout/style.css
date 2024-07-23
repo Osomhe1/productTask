@@ -41,6 +41,11 @@
   padding: 0 1.5rem;
 }
 
+@media only screen and (max-width: 678px) {
+  .app_main {
+    margin-top: 1rem;
+  }
+}
 @media only screen and (max-width: 1150px) {
   .app_layout {
     grid-template-columns: 1fr;
@@ -54,9 +59,9 @@
     display: none;
   }
 
-  .app_header {
+  /* .app_header {
     display: none;
-  }
+  } */
 
   .how_to_earn_container .lists li span:first-child,
   .how_to_earn_container .lists li span:last-child {

@@ -7,10 +7,23 @@ const UserToken = localStorage.getItem('token')
 
 const commerceBase = axios.create({
   baseURL: API_URL,
-  headers: {
-    Authorization: `Bearer ${UserToken}`,
-  },
+  // headers: {
+  //   Authorization: `Bearer ${UserToken}`,
+  // },
 })
+
+commerceBase.interceptors.request.use(
+  (config) => {
+    const UserToken = localStorage.getItem('token')
+    if (UserToken) {
+      config.headers['Authorization'] = `Bearer ${UserToken}`
+    }
+    return config
+  },
+  (error) => {
+    return Promise.reject(error)
+  }
+)
 
 // get-current-username
 export const User = JSON.parse(localStorage.getItem('fisolak'))?.user.username

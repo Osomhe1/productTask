@@ -21,7 +21,6 @@ export const AppLayout = () => {
     localStorage.setItem('isAuthenticated', isAuthenticated)
   }, [isAuthenticated])
 
-  console.log(isAuthenticated, 'isAuthenticated')
   return (
     <div
       className={`${
@@ -30,7 +29,7 @@ export const AppLayout = () => {
     >
       <div className=''>{isAuthenticated ? <Header /> : <NonAuthNavbar />}</div>
       <Asidebar />
-      <main className='app_main mt-40'>
+      <main className='app_main mt4 !md: mt-40'>
         <Outlet />
       </main>
       {pathname !== '/' && (

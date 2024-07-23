@@ -31,11 +31,11 @@ const nav_item_style = {
 export const SliderContent = ({ setSlider }) => {
   const nav = useNavigate()
   const queryClient = useQueryClient()
-  const { setIsAuthenticated } = useContext(ModalContext)
+  const { setIsAuthenticated, isAuthenticated } = useContext(ModalContext)
 
   const handleLogout = () => {
-    localStorage.removeItem('authToken')
-    localStorage.removeItem('2gedaUserInfo')
+    localStorage.removeItem('token')
+    localStorage.removeItem('fisolak')
     queryClient.removeQueries()
     setIsAuthenticated(false)
     nav('/')
@@ -65,13 +65,15 @@ export const SliderContent = ({ setSlider }) => {
         </NavLink>
       </div>
 
-      {/* <button
-        className='flex items-center space-x-2 text-[15px] text-white'
-        onClick={handleLogout}
-      >
-        <IoLogOutOutline className='text-[23px]' />
-        <span>Sign out</span>
-      </button> */}
+      {isAuthenticated && (
+        <button
+          className='flex items-center space-x-2 text-[15px] text-white'
+          onClick={handleLogout}
+        >
+          <IoLogOutOutline className='text-[23px]' />
+          <span>Sign out</span>
+        </button>
+      )}
     </>
   )
 }
